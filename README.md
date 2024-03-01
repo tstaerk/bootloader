@@ -18,6 +18,8 @@ Put your bootsector at the beginning of your virtual bootdisk with the command
 dd if=hello of=bootdisk.img conv=notrunc
 ```
 
+Manipulate your bootloader, put the magic bytes 55AA at the end. If you do not know how, watch https://www.youtube.com/watch?v=3C3u0eUPxZI
+
 Boot your virtual machine using the command
 ```
 qemu-system-i386 -fda bootdisk.img
