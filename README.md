@@ -13,12 +13,12 @@ Create your virtual 1MB bootdisk with the command
 dd if=/dev/zero of=bootdisk.img seek=2K count=1
 ```
 
-put your bootsector at the beginning of your virtual bootdisk with the command
+Put your bootsector at the beginning of your virtual bootdisk with the command
 ```
 dd if=hello of=bootdisk.img conv=notrunc
 ```
 
-boot your virtual machine using the command
+Boot your virtual machine using the command
 ```
 qemu-system-i386 -fda bootdisk.img
 ```
