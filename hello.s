@@ -1,19 +1,18 @@
 start:
 ; this should print H
-    mov ax, 0xe48
-    mov bx, 7
+    mov ax, 0xe48 ; al=48=H ax=e=output a string
     int 0x10
 ; E
-    mov ax, 0xe45
+    mov al, 0x45
     int 0x10
 ; L
-    mov ax, 0xe4C
+    mov al, 0x4C
     int 0x10
 ; L
-    mov ax, 0xe4C
+    mov al, 0x4C
     int 0x10
 ; O
-    mov ax, 0xe4F
+    mov al, 0x4F
     int 0x10
 .ende:
     jmp .ende
